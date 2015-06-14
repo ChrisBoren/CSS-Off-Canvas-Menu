@@ -20,23 +20,37 @@ body{
 	border-radius:5px;
 }
 
-.topbar{
-	visibility:hidden;
-	position:fixed;
-	background-color:#3F51B5; /* Material Design Indigo 500 */
-	box-shadow:0px 0px 10px rgba(0,0,0,.5);
-	z-index:100;
-	top:0;
-	left:0;
-	width:100%;
-	height:55px;
-	margin:0;
-	padding:0;
-}
+
 
 /*  Menu becomes fixed for widths over 1200px */
 @media only screen and (min-width: 1200px){
     .contentStyle{
     	margin-left:20px;
     }
+}
+
+/*	Topbar for Mobile */
+@media only screen and (max-width: 767px) {
+	.topbar{
+		position:fixed;
+		background-color:#3F51B5; /* Material Design Indigo 500 */
+		box-shadow:0px 0px 10px rgba(0,0,0,.5);
+		z-index:100;
+		top:0;
+		left:0;
+		width:100%;
+		height:55px;
+		margin:0;
+		padding:0;
+	}
+
+	.contentStyle{
+		margin-left:0px;
+		margin-right:0px;
+		margin-top:55px;
+	}
+
+	body{
+		background-attachment: fixed;
+	}
 }
