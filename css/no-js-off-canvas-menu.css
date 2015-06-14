@@ -1,17 +1,12 @@
-/* Let's grab some Google fonts for this demo - right now we're going to use Roboto */
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,500);
-/* Dress up the background a bit - because plain white is... well... plain. */
-body{
-	background-image:url('http://unsplash.it/1920/1080/?random');
-	background-size:cover;
-	background-position: center;
-	height:100vh;
-}
-
 /* Menu CSS based off http://webdesignerhut.com/pure-css-off-canvas-navigation-menu/ */
 
+#mainContent{
+    position:relative;
+    -webkit-transition: left .33s ease-out; 
+    transition: left .33s ease-out;
+}
+
 #nojs-menu {
-    font-family: 'Roboto', sans-serif;
     display: block;
     width: 290px;	/* left offset minus shadow to hide box-shadow when off canvas */
     min-height: 100%;
@@ -160,5 +155,41 @@ body{
 	background-color:#3F51B5;
 	transition: background-color .1s ease-in, box-shadow .1s ease-in;
 	box-shadow: 1px 1px 10px rgba(0,0,0,.25);
+}
+
+/* Responsive Code */
+
+/*
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+
+}*/
+
+/*@media only screen and (max-width: 767px) {
+
+}*/
+
+@media only screen and (min-width: 768px) and (max-width: 940px){
+
+}
+
+@media only screen and (min-width: 941px) and (max-width: 1199px){
+}
+
+/*  Menu becomes fixed for widths over 1200px */
+@media only screen and (min-width: 1200px){
+    #mainContent{
+        width:calc(100vw - 315px);
+        left:290px;
+        /*  Transition not working as intended */
+        -webkit-transition: left .33s ease-out; 
+        transition: left .33s ease-out;
+    }
+    .toggle{
+        visibility:hidden;
+    }
+    #nojs-menu{
+        left:0;
+    }
+
 }
 
