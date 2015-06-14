@@ -1,8 +1,6 @@
-/* Let's grab some Google fonts - right now we're going to use Roboto */
+/* Let's grab some Google fonts for this demo - right now we're going to use Roboto */
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,500);
-html, body{
-	font-family: 'Roboto', sans-serif;
-}
+/* Dress up the background a bit - because plain white is... well... plain. */
 body{
 	background-image:url('http://unsplash.it/1920/1080/?random');
 	background-size:cover;
@@ -11,7 +9,9 @@ body{
 }
 
 /* Menu CSS based off http://webdesignerhut.com/pure-css-off-canvas-navigation-menu/ */
+
 #nojs-menu {
+    font-family: 'Roboto', sans-serif;
     display: block;
     width: 290px;	/* left offset minus shadow to hide box-shadow when off canvas */
     min-height: 100%;
@@ -49,47 +49,50 @@ body{
 /* Showing the menu then the Checkbox is checked */
 #toggle:checked + #nojs-menu {
     left: 0;
-    -webkit-transition: left .33s ease-out; /* Safari 3.1 to 6.0 */
+    -webkit-transition: left .33s ease-out; 
     transition: left .33s ease-out;
 }
 
 /* Slide the toggle to inside the menu when shown */
 #toggle:checked + #nojs-menu .toggle {
     left: 230px;
-    -webkit-transition: left .33s ease-out; /* Safari 3.1 to 6.0 */
+    -webkit-transition: left .33s ease-out; 
     transition: left .33s ease-out;
 }
 
 
 #toggle:checked + body {
     margin-left: 280px;
-    -webkit-transition: left .33s ease-out; /* Safari 3.1 to 6.0 */
+    -webkit-transition: left .33s ease-out; 
     transition: left .33s ease-out;
 }
 
-/* Hide / Show menu items when toggled *
-#nojsMenu-hidden, #nojsMenu-shown{
-	-webkit-transition: display .33s ease-out; 
-    transition: display .33s ease-out;
+/* Hide / Show menu items when toggled */
+.toggle .nojs-menu-hidden, .toggle .nojs-menu-shown{
+    position:absolute;
+    top:10px;
+	-webkit-transition: opacity .33s ease-out; 
+    transition: opacity .33s ease-out;
 }
 
-#nojsMenu-hidden{
+.nojs-menu-hidden{
 	display: inline;
 }
-#nojsMenu-shown{
-	display: none;
-}
-
-#toggle:checked + #nojsMenu-shown{
+.nojs-menu-shown{
 	display: inline;
-	-webkit-transition: display .33s ease-out;
-    transition: display .33s ease-out;
+    opacity:0;
 }
 
-#toggle:checked + #nojsMenu-hidden{
-	display: none;
-	-webkit-transition: display .33s ease-out;
-    transition: display .33s ease-out;
+#toggle:checked + #nojs-menu .toggle .nojs-menu-shown{
+	opacity:1;
+	-webkit-transition: opacity .33s ease-out;
+    transition: opacity .33s ease-out;
+}
+
+#toggle:checked + #nojs-menu .toggle .nojs-menu-hidden{
+	opacity:0;
+	-webkit-transition: opacity .33s ease-out;
+    transition: opacity .33s ease-out;
 } /*
 
 
@@ -145,7 +148,7 @@ body{
 #nojs-menu ul li a:hover,
 #nojs-menu ul ul li a,
 #nojs-menu ul ul li a:hover {
-    -webkit-transition: padding 0.5s; /* Safari 3.1 to 6.0 */
+    -webkit-transition: padding 0.5s; 
     transition: padding 0.5s;
 }
 
