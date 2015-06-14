@@ -1,0 +1,161 @@
+/* Let's grab some Google fonts - right now we're going to use Roboto */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500);
+html, body{
+	font-family: 'Roboto', sans-serif;
+}
+body{
+	background-image:url('http://unsplash.it/1920/1080/?random');
+	background-size:cover;
+	background-position: center;
+	height:100vh;
+}
+
+/* Menu CSS based off http://webdesignerhut.com/pure-css-off-canvas-navigation-menu/ */
+#nojs-menu {
+    display: block;
+    width: 290px;	/* left offset minus shadow to hide box-shadow when off canvas */
+    min-height: 100%;
+    top: 0;
+    z-index: 9000;
+    position:fixed;
+}
+
+#nojs-menu  .toggle {
+    top: 0;
+    left: 300px;
+    padding:10px;
+    position: absolute;
+    color:white;
+    text-shadow:3px 3px 5px rgba(0,0,0,.25);
+    z-index:9001; /* It's over 9000!!!!! */
+    -webkit-transition: left .33s ease-out; /* Safari 3.1 to 6.0 */
+    transition: left .33s ease-out;
+
+}
+
+#toggle{
+    display: none;
+}
+
+/* Pushing the Menu off the canves */
+#nojs-menu {
+    left: -300px; /* must be the same as the width of the menu */
+    -webkit-transition: left .33s ease-out;
+    transition: left .33s ease-out;
+    background-color:#283593; /* Material Design Indigo 800 */
+    box-shadow:0px 0px 20px rgba(0,0,0,.5);
+}
+ 
+/* Showing the menu then the Checkbox is checked */
+#toggle:checked + #nojs-menu {
+    left: 0;
+    -webkit-transition: left .33s ease-out; /* Safari 3.1 to 6.0 */
+    transition: left .33s ease-out;
+}
+
+/* Slide the toggle to inside the menu when shown */
+#toggle:checked + #nojs-menu .toggle {
+    left: 230px;
+    -webkit-transition: left .33s ease-out; /* Safari 3.1 to 6.0 */
+    transition: left .33s ease-out;
+}
+
+
+#toggle:checked + body {
+    margin-left: 280px;
+    -webkit-transition: left .33s ease-out; /* Safari 3.1 to 6.0 */
+    transition: left .33s ease-out;
+}
+
+/* Hide / Show menu items when toggled *
+#nojsMenu-hidden, #nojsMenu-shown{
+	-webkit-transition: display .33s ease-out; 
+    transition: display .33s ease-out;
+}
+
+#nojsMenu-hidden{
+	display: inline;
+}
+#nojsMenu-shown{
+	display: none;
+}
+
+#toggle:checked + #nojsMenu-shown{
+	display: inline;
+	-webkit-transition: display .33s ease-out;
+    transition: display .33s ease-out;
+}
+
+#toggle:checked + #nojsMenu-hidden{
+	display: none;
+	-webkit-transition: display .33s ease-out;
+    transition: display .33s ease-out;
+} /*
+
+
+
+/*	Menu Styling */
+#nojs-menu{
+	color:white;
+}
+
+#nojs-menu span {
+    display: block;
+    font-size: 22px;
+    margin-top:0;
+    margin-left:0;
+    margin-right:0;
+    margin-bottom:20px;
+    background-color:#3F51B5;
+    padding:15px;
+}
+ 
+#nojs-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ 
+#nojs-menu ul li {
+    font-size:19px;/*
+    border-bottom: 1px solid #2c3e50;*/
+}
+ 
+#nojs-menu ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color:#fff;
+}
+ 
+#nojs-menu ul ul li {
+    background-color: #2c3e50;
+}
+ 
+/*#nojs-menu ul li a:hover,
+#nojs-menu ul ul li a {
+    padding: 10px 10px 10px 30px;
+}*/
+ 
+/*#nojs-menu ul ul li a:hover {
+    padding: 10px 10px 10px 60px;
+}*/
+ 
+#nojs-menu ul li a,
+#nojs-menu ul li a:hover,
+#nojs-menu ul ul li a,
+#nojs-menu ul ul li a:hover {
+    -webkit-transition: padding 0.5s; /* Safari 3.1 to 6.0 */
+    transition: padding 0.5s;
+}
+
+#nojs-menu ul li{
+	transition: background-color .1s ease-in, box-shadow .1s ease-in;
+}
+
+#nojs-menu ul li:hover{
+	background-color:#3F51B5;
+	transition: background-color .1s ease-in, box-shadow .1s ease-in;
+	box-shadow: 1px 1px 10px rgba(0,0,0,.25);
+}
+

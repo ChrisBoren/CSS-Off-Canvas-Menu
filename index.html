@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<!-- Work in progress to stylize and improve on a no-javascript CSS off-canvas menu -->
+<!-- Based on "Pure CSS Off Canvas Navigation Menu" tutorial from Andor Nagy -->
+<!-- http://webdesignerhut.com/pure-css-off-canvas-navigation-menu/ -->
+<head>
+	<title></title>
+	<!-- Font Awesome (batteries not included) -->
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<!-- Our stylesheet -->
+	<link rel="stylesheet" type="text/css" href="css/no-js-off-canvas-menu.css">
+</head>
+<body>
+<!-- Checkbox to show/hide the navigation menu -->
+<input type="checkbox" name="nojs-menu" value="toggle" id="toggle">
+ 
+<!-- navigation menu container -->
+<section id="nojs-menu">
+ 
+    <!-- Lable for #showmenu to hide the menu/uncheck the checkbox -->
+    <label class="toggle" for="toggle">
+    	<i id="nojsMenu-hidden" class="fa fa-2x fa-fw fa-bars"></i>
+    	<!-- <i id="nojsMenu-shown" class="fa fa-2x fa-times"></i> -->
+    </label>
+ 
+    <!-- Menu content -->
+    
+    <nav class="menuContent">
+     
+                <!-- Menu Section title -->
+        <span class="nojsMenu-title">Navigation</span>
+                <!-- First Menu -->
+        <ul>
+            <li><a href="#"><i class="fa fa-fw fa-home"></i>&nbsp; Home</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-picture-o"></i>&nbsp; Portfolio</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-coffee"></i>&nbsp; Blog</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-user"></i>&nbsp; About</a></li>
+            <li><a href="#"><i class="fa fa-fw fa-envelope-o"></i>&nbsp; Contact</a></li>
+        </ul>
+    </nav>
+ 
+</section> <!-- /#nojs-menu -->
+
+<!-- Menu content -->
+
+
+</body>
+</html>
